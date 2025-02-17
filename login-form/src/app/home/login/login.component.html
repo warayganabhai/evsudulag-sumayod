@@ -1,1 +1,11 @@
-<p>login works!</p>
+<div class="login">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="OnFormSubmit()">
+        <small *ngIf="loginForm.get('username').hasError('email') && loginForm.get('username').touched">*Invalid Email<br></small>
+        <small *ngIf="loginForm.get('username').invalid && loginForm.get('username').touched">*Username is required</small>
+        <input type="text" formControlName="username" placeholder="Username" required>
+        <small *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">*Password is required</small>
+        <input type="password" formControlName="password" placeholder="Password" required>   
+        <button type="submit">Login</button>
+    </form>
+</div>
