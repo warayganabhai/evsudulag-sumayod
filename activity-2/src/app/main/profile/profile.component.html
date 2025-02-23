@@ -1,0 +1,15 @@
+<div *ngIf="user" class="profile-container">
+    <mat-card class="profile-card">
+        <img [src]="user.profilePic" alt="Profile Picture" class="image">
+        <br>
+        <mat-card-title><strong>{{ user.name }}</strong></mat-card-title>
+        <br>
+        <label>Age: {{ user.age }}</label>
+        <br>
+        <label>Birthday: {{ user.birthday }}</label>
+        <br>
+        <label>Gender: {{ user.gender }}</label>
+        <br>
+        <label>Address: {{ user.address }}</label>
+    </mat-card>
+</div>
